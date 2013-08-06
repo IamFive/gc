@@ -1,0 +1,10 @@
+db.guide_type.insert([{
+        "_id": ObjectId("51a0290bafc3581ff8c59f9b"),
+        "status": 1,
+        "name": "PVP",
+    }, {
+        "_id": ObjectId("51a0290bafc3581ff8c59f9c"),
+        "status": 1,
+        "name": "Raiding",
+    }
+]);

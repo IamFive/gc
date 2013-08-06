@@ -1,0 +1,77 @@
+{
+    "apiVersion": "0.1",
+    "swaggerVersion": "1.1",
+    "basePath": "http://127.0.0.1:5000",
+    "resourcePath": "/authorize",
+    "apis": [{
+        "path": "/api/authorize/signup",
+        "description": "sign up",
+        "operations": [{
+                "httpMethod": "POST",
+                "nickname": "sign_up",
+                "responseClass": "User",
+                "summary": "sign up",
+                "parameters": [
+                    {
+                        "paramType": "form",
+                        "name": "email",
+                        "dataType": "string",
+                        "required": true,
+                        "allowMultiple": false,
+                        "description" : "email to sign up"
+                    },
+                    {
+                        "paramType": "form",
+                        "name": "password",
+                        "dataType": "string",
+                        "required": true,
+                        "allowMultiple": false 
+                    },
+                    {
+                        "paramType": "form",
+                        "name": "name",
+                        "dataType": "string",
+                        "required": true,
+                        "allowMultiple": false
+                    }
+                ]
+            }
+        ]
+    },{
+        "path": "/api/authorize/login",
+        "description": "login to gc site",
+        "operations": [{
+                "httpMethod": "POST",
+                "nickname": "login",
+                "responseClass": "bool",
+                "summary": "login",
+                "parameters": [
+                    {
+                        "paramType": "form",
+                        "name": "email",
+                        "dataType": "email",
+                        "required": true,
+                        "allowMultiple": false
+                    },
+                    {
+                        "paramType": "form",
+                        "name": "password",
+                        "dataType": "string",
+                        "required": true,
+                        "allowMultiple": false 
+                    }
+                ]
+            }
+        ]
+    },{
+        "path": "/api/authorize/logout",
+        "description": "logout gc site",
+        "operations": [{
+                "httpMethod": "GET",
+                "nickname": "logout",
+                "responseClass": "bool",
+                "summary": "logout"
+            }
+        ]
+    }]
+}

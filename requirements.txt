@@ -1,0 +1,9 @@
+Flask
+Werkzeug
+Flask-Assets
+Flask-Script
+flask-login==0.2.3
+Flask-Uploads
+mongoengine==0.8.1
+Flask-Mongoengine
+flask-testing

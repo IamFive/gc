@@ -1,0 +1,14 @@
+{
+    "basePath": "http://198.211.97.234/swagger/api",
+    "swaggerVersion": "1.1",
+    "apiVersion": "0.1",
+    "apis": [{
+        "path": "/system"
+    },{
+        "path": "/authorize"
+    },{
+        "path": "/profile"
+    },{
+        "path": "/guild"
+    }]
+}

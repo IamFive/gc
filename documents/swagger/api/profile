@@ -1,0 +1,118 @@
+{
+    "apiVersion": "0.1",
+    "swaggerVersion": "1.1",
+    "basePath": "http://198.211.97.234",
+    "resourcePath": "/profile",
+    "apis": [{
+            "path": "/api/profile/me",
+            "description": "get current session user",
+            "operations": [{
+                    "httpMethod": "GET",
+                    "nickname": "me",
+                    "responseClass": "User",
+                    "summary": "Get current session user."
+                }
+            ]
+        }, {
+            "path": "/api/profile/gamer",
+            "description": "add gamer profile",
+            "operations": [{
+                    "httpMethod": "POST",
+                    "nickname": "me",
+                    "responseClass": "User",
+                    "summary": "add gamer profile",
+                    "parameters": [{
+                            "paramType": "form",
+                            "name": "gender",
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "description" : "should one of (M/F/U)"
+                        }, {
+                            "paramType": "form",
+                            "name": "dob",
+                            "dataType": "Date",
+                            "allowMultiple": false,
+                            "description" : "example: 1900-01-01 00:00:00"
+                        }, {
+                            "paramType": "form",
+                            "name": "bio",
+                            "dataType": "string",
+                            "allowMultiple": false
+                        }, {
+                            "paramType": "form",
+                            "name": "games",
+                            "dataType": "List(string)",
+                            "allowMultiple": false,
+                            "description" : "the games want to find, should be the game id list. example: [\"5191a37aafc35816ac6196d1\"]"
+                        }, {
+                            "paramType": "form",
+                            "name": "avg_play_time",
+                            "dataType": "int",
+                            "allowMultiple": false,
+                            "description" : "average play time"
+                        }, {
+                            "paramType": "form",
+                            "name": "timezone",
+                            "dataType": "int",
+                            "allowMultiple": false,
+                            "description" : "timezone"
+                        }, {
+                            "paramType": "form",
+                            "name": "forum_signature",
+                            "dataType": "string",
+                            "allowMultiple": false
+                        }, {
+                            "paramType": "form",
+                            "name": "timezone",
+                            "dataType": "int",
+                            "allowMultiple": false,
+                            "description" : "timezone"
+                        }, {
+                            "paramType": "form",
+                            "name": "find_guide",
+                            "dataType": "int",
+                            "allowMultiple": false,
+                            "description" : "1/0, means true/false"
+                        }, {
+                            "paramType": "form",
+                            "name": "find_for_type",
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "description" : "the game type want to find,  should be the game type id. example: 51a0290bafc3581ff8c59f9b"
+                        }, {
+                            "paramType": "form",
+                            "name": "find_for_game",
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "description" : "the game want to find, should be the game id. example: 5191a37aafc35816ac6196d1"
+                        }, {
+                            "paramType": "form",
+                            "name": "current_realm",
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "description" : "the gamer's current realm"
+                        }, {
+                            "paramType": "form",
+                            "name": "transfer_realm",
+                            "dataType": "int",
+                            "allowMultiple": false,
+                            "description" : "1/0, means true/false"
+                        }, {
+                            "paramType": "form",
+                            "name": "preffered_role",
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "description" : "example: MT"
+                        }, {
+                            "paramType": "body",
+                            "name": "avatar",
+                            "dataType": "file",
+                            "allowMultiple": false,
+                            "description" : "avatar to upload"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,192 @@
+{
+    "apiVersion": "0.1",
+    "swaggerVersion": "1.1",
+    "basePath": "http://198.211.97.234",
+    "resourcePath": "/guild",
+    "apis": [{
+            "path": "/api/guilds/",
+            "description": "crud for guild",
+            "operations": [{
+                    "httpMethod": "POST",
+                    "nickname": "post_guild",
+                    "responseClass": "Guild",
+                    "summary": "add a new guild",
+                    "parameters": [{
+                            "paramType": "form",
+                            "name": "name",
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "description": "guild name"
+                        }, {
+                            "paramType": "form",
+                            "name": "url",
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "description": "guild url"
+                        }, {
+                            "paramType": "form",
+                            "name": "description",
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "description": "guild description"
+                        }, {
+                            "paramType": "form",
+                            "name": "founded_on",
+                            "dataType": "Date",
+                            "allowMultiple": false,
+                            "description": "guild found date"
+                        }, {
+                            "paramType": "form",
+                            "name": "min_age_required",
+                            "dataType": "int",
+                            "allowMultiple": false,
+                            "description": "the min age required for join the guild"
+                        }, {
+                            "paramType": "form",
+                            "name": "gender_required",
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "description": "should be one of (M/F/U) - the gender required for join the guild"
+                        }, {
+                            "paramType": "form",
+                            "name": "play_time_required",
+                            "dataType": "int",
+                            "allowMultiple": false,
+                            "description": ""
+                        }, {
+                            "paramType": "form",
+                            "name": "play_type",
+                            "dataType": "string",
+                            "allowMultiple": false,
+                            "description": "dont know why it means"
+                        }, {
+                            "paramType": "form",
+                            "name": "weekly_play_time",
+                            "dataType": "int",
+                            "allowMultiple": false,
+                            "description": "play time of one week total"
+                        }, {
+                            "paramType": "form",
+                            "name": "timezone",
+                            "dataType": "int",
+                            "allowMultiple": false,
+                            "description": "timezone"
+                        }, {
+                            "paramType": "form",
+                            "name": "prime_time_from",
+                            "dataType": "int",
+                            "allowMultiple": false,
+                            "description": "prime time from"
+                        }, {
+                            "paramType": "form",
+                            "name": "prime_time_to",
+                            "dataType": "int",
+                            "allowMultiple": false,
+                            "description": "prime time to"
+                        }, {
+                            "paramType": "form",
+                            "name": "previous_games",
+                            "dataType": "int",
+                            "allowMultiple": false,
+                            "description": "prime time to"
+                        }, {
+                            "paramType": "form",
+                            "name": "voice",
+                            "dataType": "bool",
+                            "allowMultiple": false,
+                            "description": "1/0 for true/false"
+                        }, {
+                            "paramType": "body",
+                            "name": "logo",
+                            "dataType": "file",
+                            "allowMultiple": false,
+                            "description" : "logo to upload"
+                        }
+                    ]
+                }, {
+                    "httpMethod": "GET",
+                    "nickname": "get_guild_list",
+                    "responseClass": "Paginate",
+                    "summary": "get guild list",
+                    "parameters": [{
+                            "paramType": "query",
+                            "name": "limit",
+                            "dataType": "int",
+                            "description": "count limit per page",
+                            "required": false,
+                            "allowMultiple": false
+                        }, {
+                            "paramType": "query",
+                            "name": "page",
+                            "dataType": "int",
+                            "description": "page num.",
+                            "required": false,
+                            "allowMultiple": false
+                        }, {
+                            "paramType": "query",
+                            "name": "where",
+                            "dataType": "string",
+                            "description": "json string used to filter, example: {\"min_age_required__gte\":18} -- min_age_required need to great than or equal to 18. django filter style :)",
+                            "required": false,
+                            "allowMultiple": false
+                        }, {
+                            "paramType": "query",
+                            "name": "sort",
+                            "dataType": "string",
+                            "description": "order by (+/-min_age_required__ge)",
+                            "required": false,
+                            "allowMultiple": false
+                        }
+                    ]
+                }
+            ]
+        }, {
+            "path": "/api/guilds/{guild_id}",
+            "description": "crud for guild",
+            "operations": [{
+                    "httpMethod": "GET",
+                    "nickname": "get_guild",
+                    "responseClass": "Guild",
+                    "summary": "get guild",
+                    "parameters": [{
+                            "paramType": "path",
+                            "name": "guild_id",
+                            "dataType": "string",
+                            "description": "The Guild id u want",
+                            "required": true,
+                            "allowMultiple": false
+                        }
+                    ]
+                }, {
+                    "httpMethod": "PUT",
+                    "nickname": "put_guild",
+                    "responseClass": "Guild",
+                    "summary": "modify a guild",
+                    "parameters": [{
+                            "paramType": "path",
+                            "name": "guild_id",
+                            "dataType": "string",
+                            "description": "The Guild id u want to modify",
+                            "required": true,
+                            "allowMultiple": false
+                        }
+                    ]
+                }, {
+                    "httpMethod": "DELETE",
+                    "nickname": "del_guild",
+                    "responseClass": "bool",
+                    "summary": "delete a guild",
+                    "parameters": [{
+                            "paramType": "path",
+                            "name": "guild_id",
+                            "dataType": "string",
+                            "description": "The Guild id u want to delete",
+                            "required": true,
+                            "allowMultiple": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

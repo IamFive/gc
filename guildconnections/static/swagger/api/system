@@ -1,0 +1,17 @@
+{
+    "apiVersion": "0.1",
+    "swaggerVersion": "1.1",
+    "basePath": "http://127.0.0.1:5000",
+    "resourcePath": "/system",
+    "apis": [{
+        "path": "/api/version",
+        "description": "Get system version",
+        "operations": [{
+                "httpMethod": "GET",
+                "nickname": "get_version",
+                "responseClass": "Version",
+                "summary": "Get guild version"
+            }
+        ]
+    }]
+}

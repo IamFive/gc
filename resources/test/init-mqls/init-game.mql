@@ -1,0 +1,17 @@
+db.game.insert({
+    "_id": ObjectId("5191a37aafc35816ac6196d1"),
+    "status": 1,
+    "name": "9Dragons",
+});
+
+db.game.insert({
+    "_id": ObjectId("5191a37aafc35816ac6196d2"),
+    "status": 1,
+    "name": "A Tale In the Desert",
+});
+
+db.game.insert({
+    "_id": ObjectId("5191a37aafc35816ac6196d3"),
+    "status": 1,
+    "name": "Dota2",
+});
